@@ -7,4 +7,6 @@ val: /home/alguerraquadrado/Cours/s8/0807/datasets/RDD_SPLIT/val/images
 #/mnt/c/Users/alex/Desktop/Alex/Cours/s8/0807/datasets/RDD_SPLIT/val/images
 
 nc: 13
-names: ["D00","D01","D10","D11","D20","D40","D43","D44","alligator crack","transverse crack","longitudinal crack","other corruption","pothole"]
+names: ["D00","D01","D10","D11","D20"]
+
+# "alligator crack","transverse crack","longitudinal crack","other corruption","pothole"]

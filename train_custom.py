@@ -4,4 +4,4 @@ from ultralytics import YOLO
 model = YOLO("yolo11m_custom.pt")
 
 # Train the model using the 'dataset_custom.yaml' dataset for x epochs
-model.train(data="dataset_custom.yaml", epochs=2, imgsz = 640, batch = 8, workers = 1, device = "cpu")
+model.train(data="dataset_custom.yaml", epochs=2, imgsz = 640, batch = 32, workers=3)

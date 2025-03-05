@@ -7,4 +7,4 @@ model = YOLO('version2.pt')
 results = model.val(data='dataset_custom.yaml')
 
 # Afficher les métriques
-print(results.metrics)  # Cela vous donnera mAP, precision, recall, etc.
+print(results.mean_results())  # Affiche les valeurs moyennes des métriques

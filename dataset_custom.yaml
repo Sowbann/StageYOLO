@@ -10,4 +10,6 @@ val: /home/alguerraquadrado/Cours/s8/0807/datasets/RDD_SPLIT/val/images
 nc: 5
 names: ["alligator crack","transverse crack","longitudinal crack","other corruption","pothole"]
 
-# "["D20","D10","D00","D90","D40"]
+# avant (erreur nom) : ["D00","D01","D10","D11","D20"]
+
+# correction : ["D20","D10","D00","autre","D40"]

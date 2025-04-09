@@ -1,6 +1,6 @@
 New https://pypi.org/project/ultralytics/8.3.105 available 😃 Update with 'pip install -U ultralytics'
-Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CPU (AMD EPYC 7663 56-Core Processor)
-[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_waste_auto.yaml, epochs=1, time=None, patience=100, batch=64, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train3, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train3
+Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81156MiB)
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_waste_auto.yaml, epochs=1, time=None, patience=100, batch=64, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train4, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train4
 Overriding model.yaml nc=80 with nc=34
 
                    from  n    params  module                                       arguments                     
@@ -32,6 +32,8 @@ YOLO11m summary: 231 layers, 20,079,222 parameters, 20,079,206 gradients, 68.3 G
 
 Transferred 643/649 items from pretrained weights
 Freezing layer 'model.23.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
 [34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (103).jpg: corrupt JPEG restored and saved
 [34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (178).jpg: corrupt JPEG restored and saved
 [34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (221).jpg: corrupt JPEG restored and saved
@@ -203,3 +205,86 @@ videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 
 [34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (777).jpg: corrupt JPEG restored and saved
 [34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (90).jpg: corrupt JPEG restored and saved
 WARNING ⚠️ No labels found in /home/alguerraquadrado/datasets/train/XLight.cache, training may not work correctly. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (104).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (106).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (142).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (157).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (163).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (170).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (19).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/battery/battery (139).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/bread/bread (91).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/bulb/bulb (108).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/bulb/bulb (132).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cans/can (122).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cans/can (131).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cans/can (135).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cans/can (67).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/chopsticks/chopsticks (32).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cigarettebutt/cigarettebutt (16).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cigarettebutt/cigarettebutt (43).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/diapers/diaper (208).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (125).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (178).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (179).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (30).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (45).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (46).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (47).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (48).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/leftovers/Leftovers (12).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/leftovers/Leftovers (127).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/leftovers/Leftovers (67).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/leftovers/Leftovers (88).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/medicinebottle/medicinebottle (19).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/milkbox/milkbox (11).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/milkbox/milkbox (12).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/milkbox/milkbox (13).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/nailpolishbottle/nailpolishbottle (230).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/nailpolishbottle/nailpolishbottle (242).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/napkin/napkin (11).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/napkin/napkin (52).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/napkin/napkin (97).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/newspaper/newspaper (26).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/newspaper/newspaper (40).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/pesticidebottle/pesticidebottle (89).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/plasticbag/plasticbag (197).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (102).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (119).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (72).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (74).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (77).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (100).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (102).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (103).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (3).jpeg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (99).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/thermometer/thermometer (104).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/thermometer/thermometer (106).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/toothbrush/toothbrush (67).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/toothbrush/toothbrush (68).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/toothpastetube/toothpastetube (18).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/toothpastetube/toothpastetube (19).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/traditionalChinesemedicine/traditionalChinesemedicine (21).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/traditionalChinesemedicine/traditionalChinesemedicine (55).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/watermelonrind/watermelonrind (1).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/watermelonrind/watermelonrind (58).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/watermelonrind/watermelonrind (6).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/watermelonrind/watermelonrind (82).jpg: corrupt JPEG restored and saved
+WARNING ⚠️ No labels found in /home/alguerraquadrado/datasets/test/XLight.cache, training may not work correctly. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+Plotting labels to runs/detect/train4/labels.jpg... 
+zero-size array to reduction operation maximum which has no identity
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.000263, momentum=0.9) with parameter groups 106 weight(decay=0.0), 113 weight(decay=0.0005), 112 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mruns/detect/train4[0m
+Starting training for 1 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size

@@ -11,4 +11,6 @@
 #SBATCH --account=m25008            # Compte Slurm pour le billing
 
 # Lancement de ton entraînement
-python3 /home/alguerraquadrado/StageYOLO/script/train_custom.py
+# python3 /home/alguerraquadrado/StageYOLO/script/train_road.py
+
+python3 /home/alguerraquadrado/StageYOLO/script/create_annotation.py

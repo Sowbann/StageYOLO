@@ -1,0 +1,291 @@
+New https://pypi.org/project/ultralytics/8.3.105 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81156MiB)
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_waste_auto.yaml, epochs=10, time=None, patience=100, batch=64, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train8, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train8
+Overriding model.yaml nc=80 with nc=34
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
+  1                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  2                  -1  1    111872  ultralytics.nn.modules.block.C3k2            [128, 256, 1, True, 0.25]     
+  3                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]              
+  4                  -1  1    444928  ultralytics.nn.modules.block.C3k2            [256, 512, 1, True, 0.25]     
+  5                  -1  1   2360320  ultralytics.nn.modules.conv.Conv             [512, 512, 3, 2]              
+  6                  -1  1   1380352  ultralytics.nn.modules.block.C3k2            [512, 512, 1, True]           
+  7                  -1  1   2360320  ultralytics.nn.modules.conv.Conv             [512, 512, 3, 2]              
+  8                  -1  1   1380352  ultralytics.nn.modules.block.C3k2            [512, 512, 1, True]           
+  9                  -1  1    656896  ultralytics.nn.modules.block.SPPF            [512, 512, 5]                 
+ 10                  -1  1    990976  ultralytics.nn.modules.block.C2PSA           [512, 512, 1]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  1   1642496  ultralytics.nn.modules.block.C3k2            [1024, 512, 1, True]          
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 16                  -1  1    542720  ultralytics.nn.modules.block.C3k2            [1024, 256, 1, True]          
+ 17                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]              
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 19                  -1  1   1511424  ultralytics.nn.modules.block.C3k2            [768, 512, 1, True]           
+ 20                  -1  1   2360320  ultralytics.nn.modules.conv.Conv             [512, 512, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22                  -1  1   1642496  ultralytics.nn.modules.block.C3k2            [1024, 512, 1, True]          
+ 23        [16, 19, 22]  1   1437238  ultralytics.nn.modules.head.Detect           [34, [256, 512, 512]]         
+YOLO11m summary: 231 layers, 20,079,222 parameters, 20,079,206 gradients, 68.3 GFLOPs
+
+Transferred 643/649 items from pretrained weights
+Freezing layer 'model.23.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (103).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (178).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (221).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (254).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (264).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (271).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (41).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (44).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (483).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (491).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (562).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (575).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (596).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (597).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (598).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (706).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (709).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (734).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/XLight/XLight (96).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bandaid/bandaid (160).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bandaid/bandaid (23).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bandaid/bandaid (7).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/battery/battery (198).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/battery/battery (305).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/battery/battery (36).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/battery/battery (46).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/battery/battery (480).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/battery/battery (539).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/battery/battery (562).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/battery/battery (672).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bowlsanddishes/bowlsanddishes (149).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bowlsanddishes/bowlsanddishes (231).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bowlsanddishes/bowlsanddishes (60).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bowlsanddishes/bowlsanddishes (85).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bread/bread (387).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bread/bread (638).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bulb/bulb (105).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bulb/bulb (11).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bulb/bulb (138).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bulb/bulb (139).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bulb/bulb (186).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bulb/bulb (278).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/bulb/bulb (279).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/cans/can (331).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/cans/can (8).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/chopsticks/chopsticks (34).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/cigarettebutt/cigarettebutt (2).png: ignoring corrupt image/label: broken PNG file (bad header checksum in b'IDAT')
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/facialmask/facialmask (14).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/facialmask/facialmask (299).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/facialmask/facialmask (359).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/facialmask/facialmask (432).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/facialmask/facialmask (99).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (158).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (175).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (178).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (199).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (210).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (29).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (295).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (306).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (351).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (353).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (357).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (358).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (493).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (520).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (529).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (534).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (59).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (607).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (621).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (622).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (636).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (637).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (646).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (679).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (694).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (695).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (721).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (772).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (808).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (824).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (858).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (862).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (863).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (880).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/leftovers/Leftovers (921).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/medicinebottle/medicinebottle (165).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/medicinebottle/medicinebottle (31).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/nailpolishbottle/nailpolishbottle (946).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/napkin/napkin (45).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/napkin/napkin (46).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/newspaper/newspaper (387).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/newspaper/newspaper (388).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/newspaper/newspaper (553).jpg: ignoring corrupt image/label: image size (1, 1) <10 pixels
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/newspaper/newspaper (623).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/newspaper/newspaper (637).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/newspaper/newspaper (751).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/penholder/penholder (439).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/pesticidebottle/pesticidebottle (147).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/pesticidebottle/pesticidebottle (234).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/pesticidebottle/pesticidebottle (558).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/pesticidebottle/pesticidebottle (559).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/pesticidebottle/pesticidebottle (720).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticbag/plasticbag (146).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticbag/plasticbag (309).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticbag/plasticbag (520).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticbag/plasticbag (540).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticbag/plasticbag (543).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticbag/plasticbag (595).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticene/plasticene (220).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticene/plasticene (299).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticene/plasticene (308).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticene/plasticene (569).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticene/plasticene (64).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/plasticene/plasticene (89).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/rag/rag (29).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/rag/rag (331).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/rag/rag (78).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/thermometer/thermometer (41).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/toothbrush/toothbrush (124).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/toothbrush/toothbrush (126).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/toothbrush/toothbrush (152).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/toothbrush/toothbrush (189).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/toothbrush/toothbrush (347).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/toothpastetube/toothpastetube (33).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/traditionalChinesemedicine/traditionalChinesemedicine (17).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/traditionalChinesemedicine/traditionalChinesemedicine (25).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (10).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (148).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (16).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (163).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (169).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (219).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (261).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (282).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (308).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (326).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (352).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (353).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (460).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (483).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (555).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (573).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (640).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (664).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (777).jpg: corrupt JPEG restored and saved
+[34m[1mtrain: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/train/watermelonrind/watermelonrind (90).jpg: corrupt JPEG restored and saved
+WARNING ⚠️ No labels found in /home/alguerraquadrado/datasets/train/XLight.cache, training may not work correctly. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (104).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (106).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (142).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (157).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (163).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (170).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/XLight/XLight (19).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/battery/battery (139).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/bread/bread (91).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/bulb/bulb (108).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/bulb/bulb (132).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cans/can (122).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cans/can (131).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cans/can (135).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cans/can (67).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/chopsticks/chopsticks (32).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cigarettebutt/cigarettebutt (16).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/cigarettebutt/cigarettebutt (43).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/diapers/diaper (208).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (125).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (178).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (179).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (30).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (45).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (46).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (47).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/facialmask/facialmask (48).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/leftovers/Leftovers (12).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/leftovers/Leftovers (127).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/leftovers/Leftovers (67).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/leftovers/Leftovers (88).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/medicinebottle/medicinebottle (19).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/milkbox/milkbox (11).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/milkbox/milkbox (12).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/milkbox/milkbox (13).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/nailpolishbottle/nailpolishbottle (230).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/nailpolishbottle/nailpolishbottle (242).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/napkin/napkin (11).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/napkin/napkin (52).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/napkin/napkin (97).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/newspaper/newspaper (26).jpg: ignoring corrupt image/label: invalid image format GIF. Supported formats are:
+images: {'mpo', 'tif', 'tiff', 'bmp', 'jpeg', 'pfm', 'png', 'webp', 'jpg', 'heic', 'dng'}
+videos: {'ts', 'mov', 'mp4', 'gif', 'mpg', 'asf', 'mpeg', 'webm', 'mkv', 'avi', 'wmv', 'm4v'}
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/newspaper/newspaper (40).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/pesticidebottle/pesticidebottle (89).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/plasticbag/plasticbag (197).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (102).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (119).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (72).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (74).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/rag/rag (77).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (100).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (102).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (103).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (3).jpeg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/tabletcapsule/tabletcapsule (99).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/thermometer/thermometer (104).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/thermometer/thermometer (106).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/toothbrush/toothbrush (67).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/toothbrush/toothbrush (68).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/toothpastetube/toothpastetube (18).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/toothpastetube/toothpastetube (19).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/traditionalChinesemedicine/traditionalChinesemedicine (21).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/traditionalChinesemedicine/traditionalChinesemedicine (55).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/watermelonrind/watermelonrind (1).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/watermelonrind/watermelonrind (58).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/watermelonrind/watermelonrind (6).jpg: corrupt JPEG restored and saved
+[34m[1mval: [0mWARNING ⚠️ /home/alguerraquadrado/datasets/test/watermelonrind/watermelonrind (82).jpg: corrupt JPEG restored and saved
+WARNING ⚠️ No labels found in /home/alguerraquadrado/datasets/test/XLight.cache, training may not work correctly. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+Plotting labels to runs/detect/train8/labels.jpg... 
+zero-size array to reduction operation maximum which has no identity
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.000263, momentum=0.9) with parameter groups 106 weight(decay=0.0), 113 weight(decay=0.0005), 112 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mruns/detect/train8[0m
+Starting training for 10 epochs...
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size

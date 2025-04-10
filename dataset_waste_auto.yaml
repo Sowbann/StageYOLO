@@ -1,38 +1,5 @@
 names:
-- XLight
-- bandaid
-- battery
-- bowlsanddishes
-- bread
-- bulb
-- cans
-- carton
-- chopsticks
-- cigarettebutt
-- diapers
-- facialmask
-- glassbottle
-- leaflet
-- leftovers
-- medicinebottle
-- milkbox
-- nailpolishbottle
-- napkin
-- newspaper
-- nut
-- penholder
-- pesticidebottle
-- plasticbag
-- plasticbottle
-- plasticene
-- rag
-- tabletcapsule
-- thermometer
-- toothbrush
-- toothpastetube
-- toothpick
-- traditionalChinesemedicine
-- watermelonrind
-nc: 34
-train: /home/alguerraquadrado/datasets/train
-val: /home/alguerraquadrado/datasets/test
+
+nc: 
+train: /home/alguerraquadrado/datasets/
+val: /home/alguerraquadrado/datasets/

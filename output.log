@@ -1,6 +1,6 @@
 New https://pypi.org/project/ultralytics/8.3.106 available 😃 Update with 'pip install -U ultralytics'
 Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81156MiB)
-[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_waste.yaml, epochs=10, time=None, patience=100, batch=64, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train9, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train9
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_waste.yaml, epochs=100, time=None, patience=100, batch=64, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=8, project=None, name=train9, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train9
 Overriding model.yaml nc=80 with nc=60
 
                    from  n    params  module                                       arguments                     
@@ -34,89 +34,3 @@ Transferred 643/649 items from pretrained weights
 Freezing layer 'model.23.dfl.conv.weight'
 [34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
 [34m[1mAMP: [0mchecks passed ✅
-[34m[1mtrain: [0mNew cache created: /home/alguerraquadrado/datasets/TACO/data/batch_1/labels.cache
-[34m[1mval: [0mNew cache created: /home/alguerraquadrado/datasets/TACO/data/batch_14/labels.cache
-Plotting labels to runs/detect/train9/labels.jpg... 
-[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
-[34m[1moptimizer:[0m AdamW(lr=0.000156, momentum=0.9) with parameter groups 106 weight(decay=0.0), 113 weight(decay=0.0005), 112 bias(decay=0.0)
-Image sizes 640 train, 640 val
-Using 8 dataloader workers
-Logging results to [1mruns/detect/train9[0m
-Starting training for 10 epochs...
-Closing dataloader mosaic
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497      0.358     0.0542       0.02     0.0165
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497      0.221      0.164     0.0582     0.0473
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497      0.314      0.186     0.0875     0.0714
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497      0.219      0.159     0.0776     0.0572
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497      0.222      0.182     0.0924     0.0729
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497       0.26      0.147      0.112      0.088
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497      0.216      0.134      0.121      0.093
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497       0.22      0.181      0.151      0.114
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497      0.211       0.22      0.145      0.109
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        185        497      0.207      0.169      0.142      0.113
-
-10 epochs completed in 0.030 hours.
-Optimizer stripped from runs/detect/train9/weights/last.pt, 40.6MB
-Optimizer stripped from runs/detect/train9/weights/best.pt, 40.6MB
-
-Validating runs/detect/train9/weights/best.pt...
-Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81156MiB)
-YOLO11m summary (fused): 125 layers, 20,076,292 parameters, 0 gradients, 67.9 GFLOPs
-                   all        185        497       0.22      0.181       0.15      0.114
-        Aluminium foil          1          1          0          0    0.00306    0.00214
-  Other plastic bottle          8          8      0.156      0.125      0.211      0.131
-  Clear plastic bottle         18         23      0.397      0.565      0.484      0.391
-          Glass bottle          9         12       0.42      0.583      0.542      0.327
-    Plastic bottle cap         27         27      0.351      0.361      0.323      0.294
-      Metal bottle cap         11         11      0.368      0.545      0.325      0.228
-          Broken glass          6         50          0          0          0          0
-              Food Can          1          1          0          0     0.0226     0.0158
-             Drink can         15         20       0.14        0.7      0.259      0.234
-          Other carton          8          9      0.119      0.222      0.126      0.123
-           Meal carton          2          2          0          0     0.0495     0.0495
-             Paper cup          8          8      0.153      0.125     0.0861     0.0842
-Disposable plastic cup         11         12     0.0998      0.167       0.11     0.0971
-              Foam cup          4          5          1          0      0.333      0.117
-           Plastic lid          9         10          0          0     0.0883     0.0658
-         Other plastic         25         35      0.109      0.229      0.133      0.107
-               Tissues          6          6          0          0     0.0323     0.0224
-        Wrapping paper          4          5          1          0     0.0273     0.0257
-          Normal paper          7          8      0.147      0.375      0.211      0.187
-             Paper bag          5          7      0.557      0.429      0.371      0.356
-          Plastic film         28         34     0.0982      0.176      0.111     0.0951
-           Garbage bag          1          2          0          0          0          0
- Other plastic wrapper         26         33      0.201      0.441      0.168      0.131
-Single-use carrier bag          1          1          0          0     0.0178     0.0178
-          Crisp packet          1          1          0          0    0.00748    0.00748
-Disposable food container          2          2          0          0    0.00346    0.00277
-   Foam food container          1          1          1          0      0.111     0.0111
-      Plastic utensils          8         10      0.354        0.3      0.314      0.249
-               Pop tab         13         17      0.345      0.118      0.166     0.0945
-        Rope & strings          2          2          0          0          0          0
-           Scrap metal          2          2          0          0          0          0
-         Plastic straw         16         22      0.343      0.333      0.283      0.222
-       Styrofoam piece          8         12     0.0645      0.167      0.175      0.169
-      Unlabeled litter         36         60      0.114      0.233     0.0759     0.0445
-             Cigarette         18         38       0.15      0.158     0.0943     0.0757
-Speed: 0.1ms preprocess, 1.9ms inference, 0.0ms loss, 0.6ms postprocess per image
-Results saved to [1mruns/detect/train9[0m

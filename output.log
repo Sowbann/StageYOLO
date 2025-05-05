@@ -1,6 +1,6 @@
 New https://pypi.org/project/ultralytics/8.3.127 available 😃 Update with 'pip install -U ultralytics'
 Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81156MiB)
-[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_road.yaml, epochs=10, time=None, patience=100, batch=64, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=64, project=None, name=train3, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train3
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_road.yaml, epochs=20, time=None, patience=100, batch=128, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=64, project=None, name=train3, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train3
 Overriding model.yaml nc=80 with nc=5
 
                    from  n    params  module                                       arguments                     
@@ -36,55 +36,85 @@ Freezing layer 'model.23.dfl.conv.weight'
 [34m[1mAMP: [0mchecks passed ✅
 Plotting labels to runs/detect/train3/labels.jpg... 
 [34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
-[34m[1moptimizer:[0m AdamW(lr=0.001111, momentum=0.9) with parameter groups 106 weight(decay=0.0), 113 weight(decay=0.0005), 112 bias(decay=0.0)
+[34m[1moptimizer:[0m AdamW(lr=0.001111, momentum=0.9) with parameter groups 106 weight(decay=0.0), 113 weight(decay=0.001), 112 bias(decay=0.0)
 Image sizes 640 train, 640 val
 Using 14 dataloader workers
 Logging results to [1mruns/detect/train3[0m
-Starting training for 10 epochs...
+Starting training for 20 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.354      0.253      0.199     0.0827
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.214      0.139     0.0738     0.0291
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.158      0.246      0.118     0.0445
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.397       0.34      0.289      0.128
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.363      0.364      0.295      0.133
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740       0.47      0.426      0.397      0.191
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.501      0.407      0.411      0.201
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.477      0.428      0.415      0.201
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.523      0.457      0.461      0.231
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all       5758       9740      0.539      0.475      0.481      0.248
 Closing dataloader mosaic
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.259      0.233      0.143     0.0576
+                   all       5758       9740      0.565      0.486      0.496      0.252
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.193      0.179      0.106     0.0412
+                   all       5758       9740      0.557      0.502      0.514      0.268
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.227      0.259      0.143      0.057
+                   all       5758       9740      0.577      0.511      0.533      0.276
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.374      0.312      0.273      0.122
+                   all       5758       9740      0.582      0.508      0.529      0.275
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.445      0.378      0.352      0.166
+                   all       5758       9740       0.61      0.516      0.553      0.295
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.468      0.412      0.386      0.184
+                   all       5758       9740      0.609      0.544      0.572      0.306
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.507      0.441      0.435      0.212
+                   all       5758       9740      0.613      0.548      0.583      0.312
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.533      0.454      0.468      0.234
+                   all       5758       9740      0.637      0.555      0.596      0.324
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740       0.56      0.493      0.504      0.259
+                   all       5758       9740      0.644      0.557      0.601      0.327
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all       5758       9740      0.569      0.515      0.532       0.28
+                   all       5758       9740      0.642      0.567      0.611      0.333
 
-10 epochs completed in 0.530 hours.
+20 epochs completed in 1.015 hours.
 Optimizer stripped from runs/detect/train3/weights/last.pt, 40.5MB
 Optimizer stripped from runs/detect/train3/weights/best.pt, 40.5MB
 
 Validating runs/detect/train3/weights/best.pt...
 Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81156MiB)
 YOLO11m summary (fused): 125 layers, 20,033,887 parameters, 0 gradients, 67.7 GFLOPs
-                   all       5758       9740      0.568      0.515      0.532       0.28
-       alligator crack       2011       3890      0.549      0.489      0.497      0.263
-      transverse crack       1158       1769      0.539      0.445      0.456      0.215
-    longitudinal crack       1222       1553      0.618      0.547      0.593      0.311
-      other corruption       1093       1563      0.614      0.727      0.723      0.442
-               pothole        544        965      0.522      0.365      0.392      0.169
+                   all       5758       9740      0.644      0.567      0.611      0.333
+       alligator crack       2011       3890      0.624      0.527      0.572       0.32
+      transverse crack       1158       1769      0.604      0.513      0.548      0.274
+    longitudinal crack       1222       1553      0.678      0.615       0.66      0.357
+      other corruption       1093       1563      0.665      0.765      0.781       0.49
+               pothole        544        965      0.647      0.415      0.495      0.225
 Speed: 0.1ms preprocess, 1.5ms inference, 0.0ms loss, 0.5ms postprocess per image
 Results saved to [1mruns/detect/train3[0m

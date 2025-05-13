@@ -2,11 +2,8 @@ import os
 import shutil
 import random
 
-#source_dir = "../datasets/TACO/data/"  # dossier contenant les batchs
-#output_dir = "../datasets/TACO/dataYOLO/"
-
-source_dir = "/home/alguerraquadrado/datasets/TACO/data/"  # dossier contenant les batchs
-output_dir = "/home/alguerraquadrado/datasets/TACO/dataYOLO/"
+source_dir = "../datasets/TACO/data/"  # dossier contenant les batchs
+output_dir = "../datasets/TACO/dataYOLO/"
 
 all_pairs = []
 

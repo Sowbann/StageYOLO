@@ -3,7 +3,6 @@ import os
 
 # === Chemin du fichier COCO commun ===
 coco_json_path = "../datasets/TACO/data/annotations.json"
-#coco_json_path = "/home/alguerraquadrado/datasets/TACO/data/annotations.json"
 
 # === Charger le fichier JSON une seule fois ===
 with open(coco_json_path, 'r') as f:
@@ -19,7 +18,6 @@ for batch_id in range(1, 16):  # De batch_3 à batch_15
     print(f"🔄 Traitement du batch_{batch_id}...")
 
     output_labels_dir = f"../datasets/TACO/data/batch_{batch_id}/labels"
-    #output_labels_dir = f"/home/alguerraquadrado/datasets/TACO/data/batch_{batch_id}/labels"
 
     os.makedirs(output_labels_dir, exist_ok=True)
 

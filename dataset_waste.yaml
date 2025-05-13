@@ -1,24 +1,66 @@
 train:
-- /home/alguerraquadrado/datasets/TACO/data/batch_1/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_2/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_3/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_4/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_5/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_6/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_7/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_8/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_9/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_10/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_11/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_12/images
+- /home/alguerraquadrado/datasets/TACO/dataYOLO/images/train
 val:
-- /home/alguerraquadrado/datasets/TACO/data/batch_13/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_14/images
-- /home/alguerraquadrado/datasets/TACO/data/batch_15/images
-nc: 5
+- /home/alguerraquadrado/datasets/TACO/dataYOLO/images/val
+nc: 60
 names:
+- Aluminium foil
+- Battery
+- Aluminium blister pack
+- Carded blister pack
+- Other plastic bottle
 - Clear plastic bottle
+- Glass bottle
 - Plastic bottle cap
+- Metal bottle cap
+- Broken glass
+- Food Can
+- Aerosol
+- Drink can
+- Toilet tube
+- Other carton
+- Egg carton
+- Drink carton
+- Corrugated carton
+- Meal carton
+- Pizza box
+- Paper cup
+- Disposable plastic cup
+- Foam cup
+- Glass cup
+- Other plastic cup
+- Food waste
+- Glass jar
+- Plastic lid
+- Metal lid
+- Other plastic
+- Magazine paper
+- Tissues
+- Wrapping paper
+- Normal paper
+- Paper bag
+- Plastified paper bag
+- Plastic film
+- Six pack rings
+- Garbage bag
 - Other plastic wrapper
 - Single-use carrier bag
+- Polypropylene bag
+- Crisp packet
+- Spread tub
+- Tupperware
+- Disposable food container
+- Foam food container
+- Other plastic container
+- Plastic glooves
+- Plastic utensils
+- Pop tab
+- Rope & strings
+- Scrap metal
+- Shoe
+- Squeezable tube
+- Plastic straw
+- Paper straw
+- Styrofoam piece
+- Unlabeled litter
 - Cigarette

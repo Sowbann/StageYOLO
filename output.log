@@ -1,7 +1,7 @@
-New https://pypi.org/project/ultralytics/8.3.133 available 😃 Update with 'pip install -U ultralytics'
+New https://pypi.org/project/ultralytics/8.3.134 available 😃 Update with 'pip install -U ultralytics'
 Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81156MiB)
-[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_waste.yaml, epochs=10, time=None, patience=100, batch=64, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=32, project=None, name=train2, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train2
-Overriding model.yaml nc=80 with nc=60
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolo11m_custom.pt, data=dataset_waste.yaml, epochs=30, time=None, patience=100, batch=64, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=32, project=None, name=train3, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train3
+Overriding model.yaml nc=80 with nc=16
 
                    from  n    params  module                                       arguments                     
   0                  -1  1      1856  ultralytics.nn.modules.conv.Conv             [3, 64, 3, 2]                 
@@ -27,101 +27,134 @@ Overriding model.yaml nc=80 with nc=60
  20                  -1  1   2360320  ultralytics.nn.modules.conv.Conv             [512, 512, 3, 2]              
  21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
  22                  -1  1   1642496  ultralytics.nn.modules.block.C3k2            [1024, 512, 1, True]          
- 23        [16, 19, 22]  1   1457284  ultralytics.nn.modules.head.Detect           [60, [256, 512, 512]]         
-YOLO11m summary: 231 layers, 20,099,268 parameters, 20,099,252 gradients, 68.4 GFLOPs
+ 23        [16, 19, 22]  1   1423360  ultralytics.nn.modules.head.Detect           [16, [256, 512, 512]]         
+YOLO11m summary: 231 layers, 20,065,344 parameters, 20,065,328 gradients, 68.3 GFLOPs
 
 Transferred 643/649 items from pretrained weights
 Freezing layer 'model.23.dfl.conv.weight'
 [34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
 [34m[1mAMP: [0mchecks passed ✅
-Plotting labels to runs/detect/train2/labels.jpg... 
+Plotting labels to runs/detect/train3/labels.jpg... 
 [34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
-[34m[1moptimizer:[0m AdamW(lr=0.000156, momentum=0.9) with parameter groups 106 weight(decay=0.0), 113 weight(decay=0.0005), 112 bias(decay=0.0)
+[34m[1moptimizer:[0m AdamW(lr=0.0005, momentum=0.9) with parameter groups 106 weight(decay=0.0), 113 weight(decay=0.0005), 112 bias(decay=0.0)
 Image sizes 640 train, 640 val
 Using 18 dataloader workers
-Logging results to [1mruns/detect/train2[0m
-Starting training for 10 epochs...
+Logging results to [1mruns/detect/train3[0m
+Starting training for 30 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.109     0.0745     0.0244     0.0186
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.356      0.112     0.0622     0.0436
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.293      0.126     0.0619     0.0434
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.314      0.197     0.0902     0.0639
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.212       0.15     0.0602     0.0438
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507       0.16      0.213     0.0684     0.0482
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.466      0.124     0.0906     0.0647
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.352       0.12     0.0846     0.0623
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.332      0.158     0.0608     0.0394
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.263     0.0871     0.0485     0.0321
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507       0.35     0.0812     0.0451       0.03
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.354     0.0959     0.0731     0.0488
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.196      0.161     0.0815     0.0527
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.168      0.169     0.0762     0.0517
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.102      0.188      0.102     0.0765
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507       0.44      0.145      0.126     0.0973
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.287      0.113     0.0779     0.0579
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507     0.0928      0.179     0.0853     0.0605
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507      0.178        0.2      0.101      0.075
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        167        507       0.19      0.137      0.115     0.0861
 Closing dataloader mosaic
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507     0.0075      0.301     0.0195      0.017
+                   all        167        507      0.323      0.191      0.139      0.109
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.218      0.071     0.0374     0.0314
+                   all        167        507      0.363      0.161      0.117     0.0902
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.428      0.107     0.0603       0.05
+                   all        167        507       0.23      0.174      0.154      0.116
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.512     0.0975     0.0867     0.0732
+                   all        167        507      0.231      0.214      0.171      0.132
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.617       0.11      0.123      0.108
+                   all        167        507      0.229      0.214      0.178      0.136
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.562      0.128       0.16       0.14
+                   all        167        507      0.239      0.203      0.176      0.141
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.476      0.138      0.145      0.119
+                   all        167        507       0.24      0.217        0.2      0.162
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.531      0.142       0.14      0.122
+                   all        167        507      0.273      0.206      0.189      0.152
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.306      0.173      0.157      0.135
+                   all        167        507      0.267      0.219      0.191      0.152
 
       Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-                   all        167        507      0.435      0.166      0.169      0.146
+                   all        167        507      0.242      0.237       0.19      0.148
 
-10 epochs completed in 0.018 hours.
-Optimizer stripped from runs/detect/train2/weights/last.pt, 40.6MB
-Optimizer stripped from runs/detect/train2/weights/best.pt, 40.6MB
+30 epochs completed in 0.062 hours.
+Optimizer stripped from runs/detect/train3/weights/last.pt, 40.5MB
+Optimizer stripped from runs/detect/train3/weights/best.pt, 40.5MB
 
-Validating runs/detect/train2/weights/best.pt...
+Validating runs/detect/train3/weights/best.pt...
 Ultralytics 8.3.83 🚀 Python-3.9.14 torch-2.6.0+cu124 CUDA:0 (NVIDIA A100-SXM4-80GB, 81156MiB)
-YOLO11m summary (fused): 125 layers, 20,076,292 parameters, 0 gradients, 67.9 GFLOPs
-                   all        167        507      0.435      0.166      0.168      0.145
-        Aluminium foil          2          2          1          0    0.00607    0.00364
+YOLO11m summary (fused): 125 layers, 20,042,368 parameters, 0 gradients, 67.7 GFLOPs
+                   all        167        507      0.241      0.217        0.2      0.162
+  Plastic bottle & cap         40         65       0.42      0.508      0.479       0.41
+                 Glass         15         57      0.487       0.14       0.15      0.112
+                 Metal         29         66       0.54      0.545      0.515      0.385
+                Carton         27         30      0.384      0.267      0.311      0.196
+                 Paper          9         13     0.0792     0.0769      0.103        0.1
+    Plastic Bag & film         35         44      0.279      0.364      0.288      0.234
+     Plastic container          5          5      0.258        0.2      0.199      0.199
+ Plastic cup & utensil         19         24      0.335      0.333      0.254      0.212
+          Misc Plastic         36         57      0.236      0.193      0.121     0.0756
+             Aluminium          3          3          0          0    0.00425    0.00297
+          Rope & other          6          6          0          0      0.032     0.0202
+             Cigarette         44        124       0.23      0.145     0.0962     0.0526
+             Paper cup          2          2          0          0     0.0333     0.0333
                Battery          1          1          0          0          0          0
-   Carded blister pack          1          1          1          0          0          0
-  Other plastic bottle          8          9      0.294      0.333      0.388      0.385
-  Clear plastic bottle         23         27      0.512      0.519      0.448        0.4
-          Glass bottle         12         16      0.707      0.603       0.64      0.458
-    Plastic bottle cap         20         21      0.249      0.286      0.233      0.184
-      Metal bottle cap          7          8      0.204      0.375      0.243      0.197
-          Broken glass          3         41          0          0          0          0
-              Food Can          3         10      0.386        0.3      0.287      0.285
-               Aerosol          3          3      0.712      0.333       0.83       0.83
-             Drink can         15         32      0.692      0.702      0.681      0.561
-           Toilet tube          1          1          1          0          0          0
-          Other carton         13         14      0.295       0.21      0.175      0.133
-            Egg carton          2          2          1          0          0          0
-          Drink carton          5          5      0.227        0.2      0.192      0.171
-     Corrugated carton          6          8      0.645      0.375      0.339      0.335
-           Meal carton          1          1          0          0          0          0
-             Paper cup          2          2          0          0    0.00551    0.00516
-Disposable plastic cup          8          9      0.205      0.222      0.174      0.139
-           Plastic lid          8          8      0.575       0.25      0.351      0.314
-         Other plastic         20         30          0          0     0.0225     0.0134
-        Magazine paper          2          2          1          0          0          0
-               Tissues          6          6          1          0    0.00883    0.00864
-          Normal paper          4          4      0.114        0.5     0.0704     0.0493
-          Plastic film         30         38      0.251      0.395      0.253      0.184
-           Garbage bag          1          1          0          0      0.249      0.249
- Other plastic wrapper         21         25      0.123       0.28      0.166      0.117
-Single-use carrier bag          4          4          0          0     0.0159     0.0143
-     Polypropylene bag          1          1          1          0          0          0
-          Crisp packet          2          2          0          0      0.109     0.0908
-Disposable food container          4          4          1          0    0.00776    0.00776
-Other plastic container          1          1          1          0          0          0
-       Plastic glooves          1          1          1          0      0.332      0.298
-      Plastic utensils          3          3          0          0     0.0243     0.0202
-               Pop tab          6         11      0.466      0.364      0.315      0.273
-        Rope & strings          6          6          0          0     0.0173    0.00347
-           Scrap metal          2          2          1          0      0.067     0.0538
-         Plastic straw          9         11      0.198      0.364      0.256      0.205
-       Styrofoam piece          8         10      0.153        0.2     0.0599     0.0589
-      Unlabeled litter         35         53     0.0979     0.0755     0.0527     0.0295
-             Cigarette         17         71      0.157     0.0704     0.0523     0.0262
-Speed: 0.1ms preprocess, 1.9ms inference, 0.0ms loss, 0.6ms postprocess per image
-Results saved to [1mruns/detect/train2[0m
+       Styrofoam piece          8         10      0.373      0.477      0.415      0.392
+Speed: 0.1ms preprocess, 1.8ms inference, 0.0ms loss, 0.6ms postprocess per image
+Results saved to [1mruns/detect/train3[0m

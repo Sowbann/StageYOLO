@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=yolo_train       # Nom du job
-#SBATCH --output=output.log         # Fichier de sortie (stdout)
-#SBATCH --error=error.log           # Fichier d'erreur (stderr)
+#SBATCH --output=output30.log         # Fichier de sortie (stdout)
+#SBATCH --error=error30.log           # Fichier d'erreur (stderr)
 #SBATCH --partition=mesonet         # Partition (choisis celle de ton cluster)
 #SBATCH -N 1                        # Nombre de nœuds (ici, 1 nœud)
 #SBATCH -c 90                      # Nombre de cœurs CPU

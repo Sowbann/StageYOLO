@@ -1,7 +1,7 @@
 train:
-- /home/alguerraquadrado/datasets/TACO/dataYOLO/images/train
+- /home/alguerraquadrado/datasets/augmenteYOLO/images/train
 val:
-- /home/alguerraquadrado/datasets/TACO/dataYOLO/images/val
+- /home/alguerraquadrado/datasets/augmenteYOLO/images/val
 nc: 16
 names:
 - Plastic bottle & cap

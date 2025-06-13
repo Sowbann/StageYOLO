@@ -78,7 +78,6 @@ for filename in sorted(os.listdir(input_images)):
     if filename.endswith('.jpg'):
         name = filename.split('.')[0]
         
-        # On ne commence qu'à partir de img_00156
         if not started:
             if name < "img_00260":
                 continue

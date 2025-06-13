@@ -1,49 +1,58 @@
-# 📊 But du stage
+# 🎯 Objectif du Stage
 
-Ce repository contient les fichiers et scripts associés à l'utilisation de plusieurs datasets, destinés à la classification des trous de route et des déchets.
+Ce repository contient les fichiers et scripts associés à l'utilisation de plusieurs datasets, destinés à la **classification des trous de route** et des **déchets** à l’aide du framework **Ultralytics YOLO**.
 
-Nous utilisons **Ultralytics YOLO** pour la classification :  
-👉 https://github.com/ultralytics/ultralytics
-
----
-
-## 📁 Contenu
-
-Les datasets utilisés (vous n'etes pas obligé de les telecharger un a un):
-
-- **TACO** (dataset de déchets) : https://github.com/pedropro/TACO
-- **RDD_SPLIT** (dataset de routes abîmées) : https://www.kaggle.com/datasets/aliabdelmenam/rdd-2022
-- **augmenteTACO** (dataset de déchets, basé sur TACO augmenté grâce à `augmentation.py`)
+🔗 YOLO : https://github.com/ultralytics/ultralytics
 
 ---
 
-## Utilisation
+## 📚 Datasets utilisés
 
-Selon le training que vous voulez effectué, modifier le fichier pour mettre les parametres(model a utiliser, nombre d'epoch, etc...) que vous souhaitez dans script/ :
-train_road.py pour les routes
-train_waste.py pour les dechets
+Vous n’avez pas besoin de les télécharger un à un, un lien de téléchargement global est fourni plus bas.
 
-Pour lancer un training, un scrit slurm est disponible dans script/train.slurm
-Il vous faut decommenté ce que vous voulez faire et changer les liens des fichiers selon votre architecture 
-
----
-
-## Resultat 
-
-Un fichier resultat est disponible avec son model et le resultat de son entrainement
-Lorsqu'il y a ecrit yy_versionXX, cela veut dire que c'est la version du model yy avec XX nombre d'epoch
-
-Vous pouvez aussi retrouver l'entiereté de l'entrainement dans runs/anciens/ pour chaque model 
+- 🗑️ **TACO** (déchets) : https://github.com/pedropro/TACO  
+- 🛣️ **RDD_SPLIT** (routes abîmées) : https://www.kaggle.com/datasets/aliabdelmenam/rdd-2022  
+- 🧪 **augmenteTACO** (déchets augmentés via `augmentation.py`, basé sur TACO)  
 
 ---
 
-## 📥 Téléchargement des datasets
+## ⚙️ Utilisation
 
-Le dataset complet est disponible en téléchargement via le lien suivant disponible jusqu'au 13/07:
+### 📂 Choix du training
 
-👉 [Télécharger datasets](https://exemple.com/chemin/vers/le/dataset.zip)
+Modifiez les fichiers situés dans `script/` pour ajuster les paramètres du modèle, le nombre d’époques, la taille des images, etc. :
 
-Une fois téléchargé, vous pouvez l'extraire avec la commande suivante :
+- `train_road.py` ➜ pour l’entraînement sur **routes**
+- `train_waste.py` ➜ pour l’entraînement sur **déchets**
+
+### 🚀 Lancer un job SLURM
+
+Un script SLURM est fourni pour lancer les entraînements :  
+📄 `script/train.slurm`
+
+Dans ce script :
+- Décommentez la section correspondant au training souhaité
+- Adaptez les chemins de fichiers à votre infrastructure (chemins absolus, envs, etc.)
+
+---
+
+## ✅ Résultats
+
+Les résultats d’entraînement sont organisés de la manière suivante :
+
+- 📁 `resultat/` ➜ contient les modèles finaux et un résumé des performances
+  - Exemple : `yy_versionXX` = modèle YOLO **yy**, entraîné sur **XX époques**
+- 📁 `runs/anciens/` ➜ archive complète de tous les entraînements précédents (logs, modèles, graphiques)
+
+---
+
+## 📥 Téléchargement des Datasets
+
+Les datasets sont regroupés dans une seule archive disponible jusqu’au **13/07/2025** :
+
+👉 [Télécharger datasets](https://filesender.renater.fr/?s=download&token=274dad06-9be0-4c27-9d0f-7709f38862f2)
+
+Après téléchargement, décompressez-les avec :
 
 ```bash
 unzip datasets.zip -d ./datasets
